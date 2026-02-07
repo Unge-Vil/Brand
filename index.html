@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="no" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unge Vil – Brand Guide v0.5 ALPHA</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ungevil: {
+                            light: '#a855f7',
+                            DEFAULT: '#9333EA', // Hovedlilla
+                            dark: '#7e22ce',
+                            bg: '#fbf7ff',
+                            mint: '#2DD4BF', // ATLAS Accent
+                            gold: '#FBBF24', // Spark Primary
+                            coral: '#FB7185', // Creative
+                            navy: '#1e1b4b', // ATLAS Primary
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'spark-pattern': "linear-gradient(135deg, #FBBF24 25%, transparent 25%), linear-gradient(225deg, #FBBF24 25%, transparent 25%), linear-gradient(45deg, #FBBF24 25%, transparent 25%), linear-gradient(315deg, #FBBF24 25%, transparent 25%)",
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .spark-bg-pattern {
+            background-color: #1a1a1a;
+            background-image: radial-gradient(#FBBF24 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .atlas-grid {
+            background-image: linear-gradient(to right, rgba(45, 212, 191, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(45, 212, 191, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white selection:bg-ungevil selection:text-white overflow-x-hidden">
+
+    <!-- ALPHA Banner -->
+    <div class="fixed top-0 left-0 right-0 bg-black text-white text-[10px] font-black text-center py-2 z-[60] uppercase tracking-[0.3em] border-b border-gray-800">
+        Visual Identity Guide v0.5 ALPHA
+    </div>
+
+    <!-- Sidebar -->
+    <div class="fixed inset-y-0 left-0 w-64 bg-gray-50 border-r border-gray-200 hidden lg:flex flex-col z-40 mt-8">
+        <div class="p-8 flex-1 overflow-y-auto">
+            <img src="UngeVil-dark-line.png" alt="Unge Vil" class="h-6 w-auto mb-12 opacity-90">
+            
+            <nav class="space-y-8">
+                <div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">Core Assets</p>
+                    <ul class="space-y-1">
+                        <li><a href="#logo" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Logo & Mark</a></li>
+                        <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Fargepalett</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">The Brands</p>
+                    <ul class="space-y-1">
+                        <li><a href="#atlas" class="block px-3 py-2 text-sm font-bold rounded-lg text-ungevil-navy bg-ungevil-mint/10 border border-ungevil-mint/20 flex items-center gap-2 transition hover:bg-ungevil-mint/20"><i data-lucide="map" class="w-3 h-3"></i> ATLAS Modellen</a></li>
+                        <li><a href="#spark" class="block px-3 py-2 text-sm font-bold rounded-lg text-yellow-700 bg-yellow-50 border border-yellow-200 flex items-center gap-2 transition hover:bg-yellow-100"><i data-lucide="zap" class="w-3 h-3"></i> Create A Spark</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">Visual Tools</p>
+                    <ul class="space-y-1">
+                        <li><a href="#some" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Social Presence</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64 p-8 md:p-20 max-w-6xl mt-8">
+        
+        <!-- Header -->
+        <header class="mb-32">
+            <span class="text-[10px] font-black text-ungevil uppercase tracking-[0.5em] block mb-4">Internal Design Draft</span>
+            <h1 class="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter leading-[0.9] mb-12">
+                Brand System<br>
+                <span class="text-gray-300">Unge Vil.</span>
+            </h1>
+            <div class="h-2 w-32 bg-ungevil rounded-full"></div>
+        </header>
+
+        <!-- Logo Section -->
+        <section id="logo" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">01. Logo & Mark</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="group">
+                    <div class="bg-gray-50 aspect-video rounded-3xl border border-gray-100 flex items-center justify-center p-12 transition-all hover:bg-white hover:shadow-2xl">
+                        <img src="UngeVil-dark-line.png" class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Dark on Light</p>
+                </div>
+                <div class="group">
+                    <div class="bg-ungevil aspect-video rounded-3xl flex items-center justify-center p-12 transition-all hover:shadow-2xl hover:shadow-purple-200">
+                        <img src="UngeVil-light-line.png" class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Light on Brand</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-col md:flex-row items-center gap-10 bg-gray-50 p-10 rounded-[2rem] border border-gray-100">
+                <img src="favicon.png" class="w-20 h-20 rounded-2xl shadow-xl border-4 border-white object-contain bg-white">
+                <div class="flex-1">
+                    <h3 class="font-black text-gray-900 uppercase text-xs tracking-[0.2em] mb-2">The Icon Mark</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Brukes som profilbilde og favicon.</p>
+                </div>
+                <a href="favicon.png" download class="text-[10px] font-black uppercase bg-white border border-gray-200 px-6 py-3 rounded-xl hover:bg-gray-100 transition shadow-sm">Get Favicon</a>
+            </div>
+        </section>
+
+        <!-- Farger -->
+        <section id="farger" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">02. Fargepalett</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="space-y-4">
+                    <div class="h-48 rounded-3xl bg-ungevil shadow-sm"></div>
+                    <div>
+                        <p class="text-xs font-black uppercase text-gray-900">Brand Purple</p>
+                        <p class="text-[10px] font-mono text-gray-400">#9333EA</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-48 rounded-3xl bg-ungevil-navy shadow-sm"></div>
+                    <div>
+                        <p class="text-xs font-black uppercase text-gray-900">Deep Navy</p>
+                        <p class="text-[10px] font-mono text-gray-400">#1E1B4B</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-48 rounded-3xl bg-ungevil-mint shadow-sm"></div>
+                    <div>
+                        <p class="text-xs font-black uppercase text-gray-900">ATLAS Mint</p>
+                        <p class="text-[10px] font-mono text-gray-400">#2DD4BF</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-48 rounded-3xl bg-ungevil-gold shadow-sm"></div>
+                    <div>
+                        <p class="text-xs font-black uppercase text-gray-900">Spark Gold</p>
+                        <p class="text-[10px] font-mono text-gray-400">#FBBF24</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATLAS Section -->
+        <section id="atlas" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">03. ATLAS Modellen</h2>
+            
+            <div class="bg-ungevil-navy rounded-[3rem] p-10 md:p-20 overflow-hidden relative mb-12 border border-white/5 atlas-grid">
+                
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <span class="text-ungevil-mint font-black uppercase text-[10px] tracking-[0.5em] block mb-4">Navigasjon & Struktur</span>
+                        <h3 class="text-5xl font-black text-white tracking-tighter mb-8 leading-none">
+                            ATLAS<br><span class="text-ungevil-mint">System.</span>
+                        </h3>
+                        <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        
+                        <!-- Visual Swatches -->
+                        <div class="flex gap-4">
+                            <div class="h-20 w-32 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-end p-3">
+                                <span class="text-[10px] text-gray-400 font-mono">NAVY</span>
+                            </div>
+                            <div class="h-20 w-32 rounded-2xl bg-ungevil-mint flex flex-col justify-end p-3">
+                                <span class="text-[10px] text-ungevil-navy font-bold font-mono">MINT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Atlas Visuals -->
+                    <div class="space-y-6">
+                        <!-- Card Style 1 -->
+                        <div class="bg-white rounded-2xl p-6 shadow-xl flex items-center gap-4 border-l-8 border-ungevil-mint">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-ungevil-navy">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Metodekort</h4>
+                                <p class="text-xs text-gray-500">Lorem ipsum description text.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Style 2 -->
+                        <div class="bg-ungevil-navy rounded-2xl p-6 shadow-xl flex items-center gap-4 border border-white/10">
+                            <div class="w-12 h-12 bg-ungevil-mint rounded-lg flex items-center justify-center text-ungevil-navy font-bold">
+                                01
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Fasekort</h4>
+                                <p class="text-xs text-gray-400">Consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Icon Set -->
+                        <div class="flex gap-4 mt-8 pt-8 border-t border-white/10">
+                            <i data-lucide="map" class="text-ungevil-mint w-6 h-6"></i>
+                            <i data-lucide="share-2" class="text-ungevil-mint w-6 h-6"></i>
+                            <i data-lucide="anchor" class="text-ungevil-mint w-6 h-6"></i>
+                            <i data-lucide="book-open" class="text-ungevil-mint w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create A Spark Section -->
+        <section id="spark" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">04. Create A Spark</h2>
+            
+            <div class="bg-[#111] rounded-[3rem] p-10 md:p-16 overflow-hidden relative spark-bg-pattern">
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-20">
+                        <div class="inline-block bg-ungevil-gold text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            Sub-Brand Identity
+                        </div>
+                        <h3 class="text-8xl md:text-9xl font-black italic text-white tracking-tighter leading-none mb-4">
+                            CREATE A <span class="text-ungevil-gold">SPARK</span>
+                        </h3>
+                        <p class="text-gray-500 text-sm font-mono uppercase tracking-widest">Energy / Innovation / Speed</p>
+                    </div>
+
+                    <!-- Stickers & Elements -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        
+                        <!-- Sticker 1 -->
+                        <div class="aspect-square bg-ungevil-gold rounded-full flex items-center justify-center p-8 transform -rotate-12 border-4 border-white shadow-2xl hover:scale-110 transition cursor-pointer">
+                            <span class="font-black text-black text-xl text-center leading-none italic">JUST<br>START.</span>
+                        </div>
+
+                        <!-- Sticker 2 -->
+                        <div class="aspect-square bg-white rounded-2xl flex flex-col items-center justify-center p-4 transform rotate-6 shadow-2xl hover:scale-110 transition cursor-pointer">
+                            <i data-lucide="zap" class="w-12 h-12 text-ungevil-gold fill-current mb-2"></i>
+                            <span class="font-bold text-black text-xs uppercase">High Voltage</span>
+                        </div>
+
+                        <!-- Sticker 3 -->
+                        <div class="aspect-square bg-transparent border-4 border-ungevil-gold rounded-full flex items-center justify-center p-4 transform -rotate-3 hover:scale-110 transition cursor-pointer border-dashed">
+                             <span class="font-black text-white text-3xl">100%</span>
+                        </div>
+
+                        <!-- Card Mockup -->
+                        <div class="aspect-[2/3] bg-gradient-to-br from-ungevil-gold to-yellow-600 rounded-xl p-4 flex flex-col justify-between transform rotate-12 translate-y-4 hover:translate-y-0 transition shadow-2xl">
+                            <div class="flex justify-between">
+                                <i data-lucide="zap" class="text-black w-6 h-6"></i>
+                                <span class="font-mono text-[10px] font-bold">NO. 01</span>
+                            </div>
+                            <h4 class="font-black text-4xl italic leading-none">GO.</h4>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Poster Mockup Strip -->
+                    <div class="mt-20 flex gap-4 overflow-hidden opacity-50">
+                        <div class="h-32 w-24 bg-white/10 rounded-lg"></div>
+                        <div class="h-32 w-24 bg-white/10 rounded-lg"></div>
+                        <div class="h-32 w-24 bg-white/10 rounded-lg"></div>
+                        <div class="h-32 w-24 bg-white/10 rounded-lg"></div>
+                        <div class="h-32 w-24 bg-white/10 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section id="some" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">05. Social Presence</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Instagram Carousel Mockup -->
+                <div class="md:col-span-2 bg-gray-50 rounded-[2.5rem] p-10 border border-gray-100 relative overflow-hidden">
+                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Carousel Post</h4>
+                    
+                    <div class="flex gap-4 overflow-x-auto pb-4 snap-x">
+                        <!-- Slide 1 -->
+                        <div class="flex-shrink-0 w-64 aspect-square bg-ungevil rounded-2xl p-6 flex flex-col justify-center snap-center shadow-lg">
+                            <h3 class="text-3xl font-black text-white italic leading-none">HVA ER<br>GREIA?</h3>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="flex-shrink-0 w-64 aspect-square bg-white border border-gray-100 rounded-2xl p-6 flex flex-col justify-center snap-center shadow-lg">
+                            <p class="text-sm font-bold text-gray-900 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="mt-4 flex gap-2">
+                                <div class="w-2 h-2 rounded-full bg-ungevil"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="flex-shrink-0 w-64 aspect-square bg-ungevil-navy rounded-2xl p-6 flex flex-col justify-center items-center text-center snap-center shadow-lg">
+                            <div class="w-12 h-12 bg-ungevil-gold rounded-full flex items-center justify-center mb-4 text-black font-bold">
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-white uppercase">Link i bio</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Mockup -->
+                <div class="bg-black rounded-[2.5rem] aspect-[9/16] relative overflow-hidden p-6 flex flex-col shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ungevil via-transparent to-black/50"></div>
+                    
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="flex items-center gap-2">
+                            <img src="favicon.png" class="w-8 h-8 rounded-full border border-white">
+                            <span class="text-white font-bold text-xs shadow-black drop-shadow-md">ungevil</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <div class="bg-white text-black px-4 py-2 rounded-xl inline-block transform -rotate-2 mb-4">
+                                <span class="font-black text-xl italic">NYHET! 🔥</span>
+                            </div>
+                            <h2 class="text-4xl font-black text-white italic leading-none mb-8">KOMMER<br>SNART</h2>
+                            
+                            <div class="bg-white/20 backdrop-blur rounded-full h-1 w-full mb-2">
+                                <div class="bg-white h-full w-2/3 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
