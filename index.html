@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unge Vil – Brand Guide v0.5 ALPHA</title>
+    <title>Unge Vil – Brand Guide v0.6 ALPHA</title>
     <link rel="icon" type="image/png" href="favicon.png">
     
     <!-- Tailwind CSS -->
@@ -18,6 +18,7 @@
     <!-- Configuration -->
     <script>
         tailwind.config = {
+            darkMode: 'class', // Enable manual dark mode
             theme: {
                 extend: {
                     colors: {
@@ -30,6 +31,11 @@
                             gold: '#FBBF24', // Spark Primary
                             coral: '#FB7185', // Creative
                             navy: '#1e1b4b', // ATLAS Primary
+                        },
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
                         }
                     },
                     fontFamily: {
@@ -54,41 +60,65 @@
                               linear-gradient(to bottom, rgba(45, 212, 191, 0.1) 1px, transparent 1px);
             background-size: 40px 40px;
         }
+        /* Custom Scrollbar for Dark Mode feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563; 
+        }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-white selection:bg-ungevil selection:text-white overflow-x-hidden">
+<body class="font-sans text-gray-800 bg-white dark:bg-gray-950 dark:text-gray-100 selection:bg-ungevil selection:text-white overflow-x-hidden transition-colors duration-300">
+
+    <!-- Dark Mode Toggle (Fixed) -->
+    <button id="theme-toggle" class="fixed bottom-6 right-6 z-[100] bg-gray-900 dark:bg-white text-white dark:text-gray-900 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 border border-gray-200 dark:border-gray-800" aria-label="Toggle Dark Mode">
+        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+    </button>
 
     <!-- ALPHA Banner -->
-    <div class="fixed top-0 left-0 right-0 bg-black text-white text-[10px] font-black text-center py-2 z-[60] uppercase tracking-[0.3em] border-b border-gray-800">
-        Visual Identity Guide v0.5 ALPHA
+    <div class="fixed top-0 left-0 right-0 bg-black dark:bg-ungevil-gold text-white dark:text-black text-[10px] font-black text-center py-2 z-[60] uppercase tracking-[0.3em] border-b border-gray-800 dark:border-yellow-600/30">
+        Visual Identity Guide v0.6 ALPHA
     </div>
 
     <!-- Sidebar -->
-    <div class="fixed inset-y-0 left-0 w-64 bg-gray-50 border-r border-gray-200 hidden lg:flex flex-col z-40 mt-8">
+    <div class="fixed inset-y-0 left-0 w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 hidden lg:flex flex-col z-40 mt-8 transition-colors duration-300">
         <div class="p-8 flex-1 overflow-y-auto">
-            <img src="UngeVil-dark-line.png" alt="Unge Vil" class="h-6 w-auto mb-12 opacity-90">
+            <!-- Logo changes based on theme, handled by script or simple opacity trick if PNG is transparent -->
+            <div class="mb-12 relative h-6 w-auto">
+                <img src="UngeVil-dark-line.png" alt="Unge Vil" class="absolute top-0 left-0 h-full w-auto opacity-90 dark:opacity-0 transition-opacity">
+                <img src="UngeVil-light-line.png" alt="Unge Vil" class="absolute top-0 left-0 h-full w-auto opacity-0 dark:opacity-100 transition-opacity">
+            </div>
             
             <nav class="space-y-8">
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">Core Assets</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Core Assets</p>
                     <ul class="space-y-1">
-                        <li><a href="#logo" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Logo & Mark</a></li>
-                        <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Fargepalett</a></li>
+                        <li><a href="#logo" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Logo & Mark</a></li>
+                        <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Fargepalett</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">The Brands</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">The Brands</p>
                     <ul class="space-y-1">
-                        <li><a href="#atlas" class="block px-3 py-2 text-sm font-bold rounded-lg text-ungevil-navy bg-ungevil-mint/10 border border-ungevil-mint/20 flex items-center gap-2 transition hover:bg-ungevil-mint/20"><i data-lucide="map" class="w-3 h-3"></i> ATLAS Modellen</a></li>
-                        <li><a href="#spark" class="block px-3 py-2 text-sm font-bold rounded-lg text-yellow-700 bg-yellow-50 border border-yellow-200 flex items-center gap-2 transition hover:bg-yellow-100"><i data-lucide="zap" class="w-3 h-3"></i> Create A Spark</a></li>
+                        <li><a href="#atlas" class="block px-3 py-2 text-sm font-bold rounded-lg text-ungevil-navy dark:text-ungevil-mint bg-ungevil-mint/10 dark:bg-ungevil-mint/5 border border-ungevil-mint/20 dark:border-ungevil-mint/10 flex items-center gap-2 transition hover:bg-ungevil-mint/20"><i data-lucide="map" class="w-3 h-3"></i> ATLAS Modellen</a></li>
+                        <li><a href="#spark" class="block px-3 py-2 text-sm font-bold rounded-lg text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700/30 flex items-center gap-2 transition hover:bg-yellow-100 dark:hover:bg-yellow-900/30"><i data-lucide="zap" class="w-3 h-3"></i> Create A Spark</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">Visual Tools</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Visual Tools</p>
                     <ul class="space-y-1">
-                        <li><a href="#some" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 hover:bg-white hover:shadow-sm transition">Social Presence</a></li>
+                        <li><a href="#some" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Social Presence</a></li>
                     </ul>
                 </div>
             </nav>
@@ -100,72 +130,73 @@
         
         <!-- Header -->
         <header class="mb-32">
-            <span class="text-[10px] font-black text-ungevil uppercase tracking-[0.5em] block mb-4">Internal Design Draft</span>
-            <h1 class="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter leading-[0.9] mb-12">
+            <span class="text-[10px] font-black text-ungevil dark:text-ungevil-light uppercase tracking-[0.5em] block mb-4">Internal Design Draft</span>
+            <h1 class="text-6xl md:text-8xl font-black text-gray-900 dark:text-white tracking-tighter leading-[0.9] mb-12">
                 Brand System<br>
-                <span class="text-gray-300">Unge Vil.</span>
+                <span class="text-gray-300 dark:text-gray-600">Unge Vil.</span>
             </h1>
             <div class="h-2 w-32 bg-ungevil rounded-full"></div>
         </header>
 
         <!-- Logo Section -->
         <section id="logo" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">01. Logo & Mark</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">01. Logo & Mark</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="group">
-                    <div class="bg-gray-50 aspect-video rounded-3xl border border-gray-100 flex items-center justify-center p-12 transition-all hover:bg-white hover:shadow-2xl">
-                        <img src="UngeVil-dark-line.png" class="h-14 w-auto object-contain">
+                    <!-- Note: The card background stays light to demonstrate the dark logo usage -->
+                    <div class="bg-gray-50 aspect-video rounded-3xl border border-gray-100 dark:border-gray-800 flex items-center justify-center p-12 transition-all hover:bg-white hover:shadow-2xl">
+                        <img src="UngeVil-light-line.png" class="h-14 w-auto object-contain">
                     </div>
                     <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Dark on Light</p>
                 </div>
                 <div class="group">
-                    <div class="bg-ungevil aspect-video rounded-3xl flex items-center justify-center p-12 transition-all hover:shadow-2xl hover:shadow-purple-200">
-                        <img src="UngeVil-light-line.png" class="h-14 w-auto object-contain">
+                    <div class="bg-ungevil aspect-video rounded-3xl flex items-center justify-center p-12 transition-all hover:shadow-2xl hover:shadow-purple-200 dark:hover:shadow-purple-900/50">
+                        <img src="UngeVil-dark-line.png" class="h-14 w-auto object-contain">
                     </div>
                     <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Light on Brand</p>
                 </div>
             </div>
 
-            <div class="mt-10 flex flex-col md:flex-row items-center gap-10 bg-gray-50 p-10 rounded-[2rem] border border-gray-100">
-                <img src="favicon.png" class="w-20 h-20 rounded-2xl shadow-xl border-4 border-white object-contain bg-white">
+            <div class="mt-10 flex flex-col md:flex-row items-center gap-10 bg-gray-50 dark:bg-gray-900 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800 transition-colors">
+                <img src="favicon.png" class="w-20 h-20 rounded-2xl shadow-xl border-4 border-white dark:border-gray-800 object-contain bg-white">
                 <div class="flex-1">
-                    <h3 class="font-black text-gray-900 uppercase text-xs tracking-[0.2em] mb-2">The Icon Mark</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Brukes som profilbilde og favicon.</p>
+                    <h3 class="font-black text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em] mb-2">The Icon Mark</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Brukes som profilbilde og favicon der plassen er begrenset.</p>
                 </div>
-                <a href="favicon.png" download class="text-[10px] font-black uppercase bg-white border border-gray-200 px-6 py-3 rounded-xl hover:bg-gray-100 transition shadow-sm">Get Favicon</a>
+                <a href="favicon.png" download class="text-[10px] font-black uppercase bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition shadow-sm">Get Favicon</a>
             </div>
         </section>
 
         <!-- Farger -->
         <section id="farger" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">02. Fargepalett</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">02. Fargepalett</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="space-y-4">
-                    <div class="h-48 rounded-3xl bg-ungevil shadow-sm"></div>
+                    <div class="h-48 rounded-3xl bg-ungevil shadow-sm border border-black/5 dark:border-white/5"></div>
                     <div>
-                        <p class="text-xs font-black uppercase text-gray-900">Brand Purple</p>
+                        <p class="text-xs font-black uppercase text-gray-900 dark:text-white">Brand Purple</p>
                         <p class="text-[10px] font-mono text-gray-400">#9333EA</p>
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <div class="h-48 rounded-3xl bg-ungevil-navy shadow-sm"></div>
+                    <div class="h-48 rounded-3xl bg-ungevil-navy shadow-sm border border-black/5 dark:border-white/5"></div>
                     <div>
-                        <p class="text-xs font-black uppercase text-gray-900">Deep Navy</p>
+                        <p class="text-xs font-black uppercase text-gray-900 dark:text-white">Deep Navy</p>
                         <p class="text-[10px] font-mono text-gray-400">#1E1B4B</p>
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <div class="h-48 rounded-3xl bg-ungevil-mint shadow-sm"></div>
+                    <div class="h-48 rounded-3xl bg-ungevil-mint shadow-sm border border-black/5 dark:border-white/5"></div>
                     <div>
-                        <p class="text-xs font-black uppercase text-gray-900">ATLAS Mint</p>
+                        <p class="text-xs font-black uppercase text-gray-900 dark:text-white">ATLAS Mint</p>
                         <p class="text-[10px] font-mono text-gray-400">#2DD4BF</p>
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <div class="h-48 rounded-3xl bg-ungevil-gold shadow-sm"></div>
+                    <div class="h-48 rounded-3xl bg-ungevil-gold shadow-sm border border-black/5 dark:border-white/5"></div>
                     <div>
-                        <p class="text-xs font-black uppercase text-gray-900">Spark Gold</p>
+                        <p class="text-xs font-black uppercase text-gray-900 dark:text-white">Spark Gold</p>
                         <p class="text-[10px] font-mono text-gray-400">#FBBF24</p>
                     </div>
                 </div>
@@ -174,9 +205,9 @@
 
         <!-- ATLAS Section -->
         <section id="atlas" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">03. ATLAS Modellen</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">03. ATLAS Modellen</h2>
             
-            <div class="bg-ungevil-navy rounded-[3rem] p-10 md:p-20 overflow-hidden relative mb-12 border border-white/5 atlas-grid">
+            <div class="bg-ungevil-navy rounded-[3rem] p-10 md:p-20 overflow-hidden relative mb-12 border border-white/5 atlas-grid shadow-2xl">
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
@@ -185,7 +216,7 @@
                             ATLAS<br><span class="text-ungevil-mint">System.</span>
                         </h3>
                         <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            Vår systemiske tilnærming til bærekraftig utvikling.
                         </p>
                         
                         <!-- Visual Swatches -->
@@ -202,13 +233,13 @@
                     <!-- Atlas Visuals -->
                     <div class="space-y-6">
                         <!-- Card Style 1 -->
-                        <div class="bg-white rounded-2xl p-6 shadow-xl flex items-center gap-4 border-l-8 border-ungevil-mint">
-                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-ungevil-navy">
+                        <div class="bg-white rounded-2xl p-6 shadow-xl flex items-center gap-4 border-l-8 border-ungevil-mint dark:bg-gray-800 dark:text-white">
+                            <div class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-ungevil-navy dark:text-ungevil-mint">
                                 <i data-lucide="compass" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">Metodekort</h4>
-                                <p class="text-xs text-gray-500">Lorem ipsum description text.</p>
+                                <h4 class="font-bold text-gray-900 dark:text-white">Metodekort</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Verktøy for kartlegging.</p>
                             </div>
                         </div>
                         
@@ -219,7 +250,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-white">Fasekort</h4>
-                                <p class="text-xs text-gray-400">Consectetur adipiscing elit.</p>
+                                <p class="text-xs text-gray-400">Systematisk prosess.</p>
                             </div>
                         </div>
 
@@ -237,9 +268,9 @@
 
         <!-- Create A Spark Section -->
         <section id="spark" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">04. Create A Spark</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">04. Create A Spark</h2>
             
-            <div class="bg-[#111] rounded-[3rem] p-10 md:p-16 overflow-hidden relative spark-bg-pattern">
+            <div class="bg-[#111] rounded-[3rem] p-10 md:p-16 overflow-hidden relative spark-bg-pattern shadow-2xl">
                 
                 <div class="relative z-10">
                     <div class="text-center mb-20">
@@ -296,26 +327,26 @@
 
         <!-- Social Media -->
         <section id="some" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.4em] mb-12">05. Social Presence</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">05. Social Presence</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Instagram Carousel Mockup -->
-                <div class="md:col-span-2 bg-gray-50 rounded-[2.5rem] p-10 border border-gray-100 relative overflow-hidden">
-                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Carousel Post</h4>
+                <div class="md:col-span-2 bg-gray-50 dark:bg-gray-900 rounded-[2.5rem] p-10 border border-gray-100 dark:border-gray-800 relative overflow-hidden transition-colors">
+                    <h4 class="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-8">Carousel Post</h4>
                     
-                    <div class="flex gap-4 overflow-x-auto pb-4 snap-x">
+                    <div class="flex gap-4 overflow-x-auto pb-4 snap-x scrollbar-hide">
                         <!-- Slide 1 -->
                         <div class="flex-shrink-0 w-64 aspect-square bg-ungevil rounded-2xl p-6 flex flex-col justify-center snap-center shadow-lg">
                             <h3 class="text-3xl font-black text-white italic leading-none">HVA ER<br>GREIA?</h3>
                         </div>
                         <!-- Slide 2 -->
-                        <div class="flex-shrink-0 w-64 aspect-square bg-white border border-gray-100 rounded-2xl p-6 flex flex-col justify-center snap-center shadow-lg">
-                            <p class="text-sm font-bold text-gray-900 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="flex-shrink-0 w-64 aspect-square bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl p-6 flex flex-col justify-center snap-center shadow-lg">
+                            <p class="text-sm font-bold text-gray-900 dark:text-white leading-relaxed">Sveip for å lære mer.</p>
                             <div class="mt-4 flex gap-2">
                                 <div class="w-2 h-2 rounded-full bg-ungevil"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-200 dark:bg-gray-600"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-200 dark:bg-gray-600"></div>
                             </div>
                         </div>
                         <!-- Slide 3 -->
@@ -329,7 +360,7 @@
                 </div>
 
                 <!-- Story Mockup -->
-                <div class="bg-black rounded-[2.5rem] aspect-[9/16] relative overflow-hidden p-6 flex flex-col shadow-2xl">
+                <div class="bg-black rounded-[2.5rem] aspect-[9/16] relative overflow-hidden p-6 flex flex-col shadow-2xl border border-gray-800">
                     <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-t from-ungevil via-transparent to-black/50"></div>
                     
@@ -340,10 +371,10 @@
                         </div>
                         
                         <div class="mt-auto">
-                            <div class="bg-white text-black px-4 py-2 rounded-xl inline-block transform -rotate-2 mb-4">
+                            <div class="bg-white text-black px-4 py-2 rounded-xl inline-block transform -rotate-2 mb-4 shadow-lg">
                                 <span class="font-black text-xl italic">NYHET! 🔥</span>
                             </div>
-                            <h2 class="text-4xl font-black text-white italic leading-none mb-8">KOMMER<br>SNART</h2>
+                            <h2 class="text-4xl font-black text-white italic leading-none mb-8 drop-shadow-lg">KOMMER<br>SNART</h2>
                             
                             <div class="bg-white/20 backdrop-blur rounded-full h-1 w-full mb-2">
                                 <div class="bg-white h-full w-2/3 rounded-full"></div>
@@ -359,6 +390,26 @@
 
     <script>
         lucide.createIcons();
+
+        // Dark Mode Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
     </script>
 </body>
 </html>
