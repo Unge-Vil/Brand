@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unge Vil – Brand Guide v0.6 ALPHA</title>
+    <title>Unge Vil – Brand Guide v0.8 ALPHA</title>
     <link rel="icon" type="image/png" href="favicon.png">
     
     <!-- Tailwind CSS -->
@@ -86,13 +86,13 @@
 
     <!-- ALPHA Banner -->
     <div class="fixed top-0 left-0 right-0 bg-black dark:bg-ungevil-gold text-white dark:text-black text-[10px] font-black text-center py-2 z-[60] uppercase tracking-[0.3em] border-b border-gray-800 dark:border-yellow-600/30">
-        Visual Identity Guide v0.6 ALPHA
+        Visual Identity Guide v0.8 ALPHA
     </div>
 
     <!-- Sidebar -->
     <div class="fixed inset-y-0 left-0 w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 hidden lg:flex flex-col z-40 mt-8 transition-colors duration-300">
         <div class="p-8 flex-1 overflow-y-auto">
-            <!-- Logo changes based on theme, handled by script or simple opacity trick if PNG is transparent -->
+            <!-- Logo changes based on theme -->
             <div class="mb-12 relative h-6 w-auto">
                 <img src="UngeVil-dark-line.png" alt="Unge Vil" class="absolute top-0 left-0 h-full w-auto opacity-90 dark:opacity-0 transition-opacity">
                 <img src="UngeVil-light-line.png" alt="Unge Vil" class="absolute top-0 left-0 h-full w-auto opacity-0 dark:opacity-100 transition-opacity">
@@ -104,6 +104,8 @@
                     <ul class="space-y-1">
                         <li><a href="#logo" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Logo & Mark</a></li>
                         <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Fargepalett</a></li>
+                        <li><a href="#typografi" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Typografi</a></li>
+                        <li><a href="#ikoner" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Ikonografi</a></li>
                     </ul>
                 </div>
                 
@@ -144,17 +146,17 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="group">
-                    <!-- Note: The card background stays light to demonstrate the dark logo usage -->
                     <div class="bg-gray-50 aspect-video rounded-3xl border border-gray-100 dark:border-gray-800 flex items-center justify-center p-12 transition-all hover:bg-white hover:shadow-2xl">
-                        <img src="UngeVil-light-line.png" class="h-14 w-auto object-contain">
+                        <img src="UngeVil-dark-line.png" class="h-14 w-auto object-contain">
                     </div>
                     <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Dark on Light</p>
                 </div>
                 <div class="group">
                     <div class="bg-ungevil aspect-video rounded-3xl flex items-center justify-center p-12 transition-all hover:shadow-2xl hover:shadow-purple-200 dark:hover:shadow-purple-900/50">
-                        <img src="UngeVil-dark-line.png" class="h-14 w-auto object-contain">
+                        <!-- Forced white logo using brightness-0 invert -->
+                        <img src="UngeVil-light-line.png" class="h-14 w-auto object-contain brightness-0 invert">
                     </div>
-                    <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Light on Brand</p>
+                    <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">Light on Brand (Forced White)</p>
                 </div>
             </div>
 
@@ -203,9 +205,124 @@
             </div>
         </section>
 
+        <!-- Typografi -->
+        <section id="typografi" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">03. Typografi</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Primary Font -->
+                <div class="space-y-8">
+                    <h3 class="text-9xl font-black text-gray-900 dark:text-white tracking-tighter italic opacity-90">Aa</h3>
+                    <div class="space-y-2">
+                        <span class="bg-ungevil text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest rounded">Primærfont</span>
+                        <h4 class="text-4xl font-bold text-gray-900 dark:text-white">Inter</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                            Inter er en moderne, grotesk sans-serif font som er optimalisert for skjerm. Den er svært lesbar og passer godt til vårt uttrykk.
+                        </p>
+                    </div>
+                    <div class="space-y-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                        <div class="flex items-baseline gap-4">
+                            <span class="w-20 text-[10px] font-mono text-gray-400 uppercase">Black</span>
+                            <span class="text-2xl font-black text-gray-900 dark:text-white">Overskrifter & Titler</span>
+                        </div>
+                        <div class="flex items-baseline gap-4">
+                            <span class="w-20 text-[10px] font-mono text-gray-400 uppercase">Bold</span>
+                            <span class="text-xl font-bold text-gray-900 dark:text-white">Mellomtitler</span>
+                        </div>
+                        <div class="flex items-baseline gap-4">
+                            <span class="w-20 text-[10px] font-mono text-gray-400 uppercase">Regular</span>
+                            <span class="text-base font-normal text-gray-900 dark:text-white">Brødtekst og innhold.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fallback Info -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Dokumenter & Google Docs</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+                            Dersom <strong>Inter</strong> ikke er tilgjengelig (f.eks. i enkelte Google Docs maler eller på fremmede maskiner), skal følgende systemfont brukes som erstatning:
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-950 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-2">Fallback Font</span>
+                        <h5 class="text-3xl font-sans font-bold text-gray-900 dark:text-white">Arial</h5>
+                        <p class="text-xs text-gray-500 mt-2">Arial er universelt tilgjengelig og sikrer at oppsettet ikke knekker.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ikonografi -->
+        <section id="ikoner" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">04. Ikonografi</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Info -->
+                <div class="lg:col-span-1 space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Stil & Retningslinjer</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Vi bruker ikoner fra <strong>Lucide</strong>-biblioteket. Stilen er ren, vennlig og moderne.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-ungevil w-5 h-5"></i>
+                            <span>Runde hjørner (Rounded corners)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-ungevil w-5 h-5"></i>
+                            <span>2px strektykkelse (Consistent stroke)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-ungevil w-5 h-5"></i>
+                            <span>Åpne former der det er naturlig</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Library Preview -->
+                <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Community</p>
+                        <div class="flex gap-3">
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil"><i data-lucide="users"></i></div>
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil"><i data-lucide="heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Gaming</p>
+                        <div class="flex gap-3">
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-mint"><i data-lucide="gamepad-2"></i></div>
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-mint"><i data-lucide="zap"></i></div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Logistikk</p>
+                        <div class="flex gap-3">
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-gold"><i data-lucide="package"></i></div>
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-gold"><i data-lucide="truck"></i></div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Kreativt</p>
+                        <div class="flex gap-3">
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-coral"><i data-lucide="palette"></i></div>
+                            <div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-coral"><i data-lucide="music"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ATLAS Section -->
         <section id="atlas" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">03. ATLAS Modellen</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">05. ATLAS Modellen</h2>
             
             <div class="bg-ungevil-navy rounded-[3rem] p-10 md:p-20 overflow-hidden relative mb-12 border border-white/5 atlas-grid shadow-2xl">
                 
@@ -268,7 +385,7 @@
 
         <!-- Create A Spark Section -->
         <section id="spark" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">04. Create A Spark</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">06. Create A Spark</h2>
             
             <div class="bg-[#111] rounded-[3rem] p-10 md:p-16 overflow-hidden relative spark-bg-pattern shadow-2xl">
                 
@@ -327,7 +444,7 @@
 
         <!-- Social Media -->
         <section id="some" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">05. Social Presence</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">07. Social Presence</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
