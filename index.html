@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unge Vil – Brand Guide v1.9 ALPHA</title>
+    <title>Unge Vil – Brand Guide v2.0 ALPHA</title>
     <link rel="icon" type="image/png" href="favicon.png">
     
     <!-- Tailwind CSS -->
@@ -18,17 +18,17 @@
     <!-- Configuration -->
     <script>
         tailwind.config = {
-            darkMode: 'class', // Enable manual dark mode
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         ungevil: {
                             light: '#a855f7',
-                            DEFAULT: '#9333EA', // Hovedlilla
+                            DEFAULT: '#9333EA', // Primary Purple
                             dark: '#7e22ce',
                             bg: '#fbf7ff',
                             
-                            // ATLAS COLORS
+                            // ATLAS
                             atlas: {
                                 dark: '#0f172a', // Slate 900
                                 base: '#334155', // Slate 700
@@ -36,7 +36,7 @@
                                 light: '#f1f5f9', // Slate 100
                             },
 
-                            // Spark Colors
+                            // Spark
                             gold: '#FBBF24', // Amber 400
                             gold_dark: '#F59E0B', // Amber 500
                             
@@ -77,7 +77,6 @@
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         .dark ::-webkit-scrollbar-thumb { background: #4b5563; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
         
         /* Deck Animations */
         .deck-card { transition: all 0.4s ease; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -97,9 +96,9 @@
         <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
     </button>
 
-    <!-- ALPHA Banner -->
+    <!-- BETA Banner -->
     <div class="fixed top-0 left-0 right-0 bg-black dark:bg-ungevil-gold text-white dark:text-black text-[10px] font-black text-center py-2 z-[60] uppercase tracking-[0.3em] border-b border-gray-800 dark:border-yellow-600/30">
-        Visual Identity Guide v1.9 ALPHA
+        Visual Identity Guide v2.0 BETA
     </div>
 
     <!-- Sidebar -->
@@ -112,28 +111,29 @@
             
             <nav class="space-y-8">
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Core Assets</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Core System</p>
                     <ul class="space-y-1">
                         <li><a href="#logo" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Logo & Mark</a></li>
-                        <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Fargepalett</a></li>
-                        <li><a href="#typografi" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Typografi</a></li>
+                        <li><a href="#farger" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Colors</a></li>
+                        <li><a href="#typografi" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Typography</a></li>
+                        <li><a href="#ikoner" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Iconography</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">The Brands</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Sub-Brands</p>
                     <ul class="space-y-1">
-                        <li><a href="#atlas" class="block px-3 py-2 text-sm font-bold rounded-lg text-ungevil-atlas-base dark:text-ungevil-atlas-accent bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 flex items-center gap-2 transition hover:bg-slate-200"><i data-lucide="map" class="w-3 h-3"></i> ATLAS Modellen</a></li>
-                        <li><a href="#spark" class="block px-3 py-2 text-sm font-bold rounded-lg text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700/30 flex items-center gap-2 transition hover:bg-yellow-100 dark:hover:bg-yellow-900/30"><i data-lucide="zap" class="w-3 h-3"></i> Create A Spark</a></li>
+                        <li><a href="#atlas" class="block px-3 py-2 text-sm font-bold rounded-lg text-ungevil-atlas-base dark:text-ungevil-atlas-accent bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 flex items-center gap-2 transition hover:bg-slate-200"><i data-lucide="map" class="w-3 h-3"></i> ATLAS</a></li>
+                        <li><a href="#spark" class="block px-3 py-2 text-sm font-bold rounded-lg text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700/30 flex items-center gap-2 transition hover:bg-yellow-100 dark:hover:bg-yellow-900/30"><i data-lucide="zap" class="w-3 h-3"></i> Spark</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Resources</p>
+                    <p class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Downloads & Tools</p>
                     <ul class="space-y-1">
-                        <li><a href="#backgrounds" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Backgrounds</a></li>
-                        <li><a href="#dev" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Web / Developer</a></li>
-                        <li><a href="#canva" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Canva & Graphics</a></li>
+                        <li><a href="#assets" class="block px-3 py-2 text-sm font-semibold rounded-lg text-white bg-ungevil hover:bg-ungevil-dark shadow-md transition flex items-center justify-between">Download Assets <i data-lucide="download" class="w-3 h-3"></i></a></li>
+                        <li><a href="#dev" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Developer</a></li>
+                        <li><a href="#canva" class="block px-3 py-2 text-sm font-semibold rounded-lg text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-800 hover:shadow-sm transition">Canva</a></li>
                     </ul>
                 </div>
             </nav>
@@ -144,16 +144,19 @@
     <main class="lg:ml-64 p-8 md:p-20 max-w-6xl mt-8">
         
         <!-- Header -->
-        <header class="mb-32">
-            <span class="text-[10px] font-black text-ungevil dark:text-ungevil-light uppercase tracking-[0.5em] block mb-4">Internal Design Draft</span>
+        <header id="intro" class="mb-32">
+            <span class="text-[10px] font-black text-ungevil dark:text-ungevil-light uppercase tracking-[0.5em] block mb-4">Design System v2.0</span>
             <h1 class="text-6xl md:text-8xl font-black text-gray-900 dark:text-white tracking-tighter leading-[0.9] mb-12">
-                Brand System<br>
-                <span class="text-gray-300 dark:text-gray-600">Unge Vil.</span>
+                Brand<br>
+                <span class="text-gray-300 dark:text-gray-600">Manual.</span>
             </h1>
-            <div class="h-2 w-32 bg-ungevil rounded-full"></div>
+            <div class="h-2 w-32 bg-ungevil rounded-full mb-8"></div>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+                Unge Vil er en barne- og ungdomsorganisasjon drevet av ungdom, forankret i trygge rammer. Dette systemet sikrer en helhetlig visuell profil på tvers av våre hovedaktiviteter: Organisasjonen (Unge Vil), Metodikken (ATLAS) og Møteplassene (Create A Spark).
+            </p>
         </header>
 
-        <!-- Logo Section (UPDATED with Dark BG Variant) -->
+        <!-- Logo Section -->
         <section id="logo" class="mb-40 scroll-mt-24">
             <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">01. Logo & Mark</h2>
             
@@ -184,7 +187,7 @@
                     <p class="mt-4 text-[10px] font-black uppercase text-gray-400 tracking-widest">On Brand (Purple BG)</p>
                 </div>
 
-                <!-- Concept Dark BG (NEW) -->
+                <!-- Concept Dark BG -->
                 <div class="group">
                     <div class="bg-gray-950 aspect-square rounded-3xl flex flex-col items-center justify-center p-8 transition-all hover:shadow-2xl gap-6 border border-gray-800">
                         <div class="flex items-center gap-3">
@@ -272,154 +275,40 @@
             </div>
         </section>
 
-        <!-- Backgrounds & Resources (NEW) -->
-        <section id="backgrounds" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">04. Brand Backgrounds</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Spark Pattern -->
-                <div class="bg-gray-50 dark:bg-gray-900 rounded-[2rem] p-6 border border-gray-200 dark:border-gray-800 flex flex-col">
-                    <div class="bg-[#050505] w-full h-48 rounded-xl spark-dot-pattern mb-6 relative overflow-hidden shadow-inner border border-white/5">
-                        <div class="absolute bottom-2 right-2 bg-ungevil-gold text-black text-[8px] font-bold px-2 py-1 rounded">SPARK</div>
-                    </div>
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-gray-900 dark:text-white">Spark Dot Pattern</h4>
-                        <button onclick="copyToClipboard('<svg width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'1.5\' cy=\'1.5\' r=\'1.5\' fill=\'%23FBBF24\'/></svg>', this)" class="text-xs bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-3 py-1 rounded-full transition">Copy SVG Code</button>
-                    </div>
-                    <p class="text-xs text-gray-500">Bruk som bakgrunn på mørke flater.</p>
-                </div>
-
-                <!-- Atlas Grid -->
-                <div class="bg-gray-50 dark:bg-gray-900 rounded-[2rem] p-6 border border-gray-200 dark:border-gray-800 flex flex-col">
-                    <div class="bg-ungevil-atlas-dark w-full h-48 rounded-xl atlas-grid mb-6 relative overflow-hidden shadow-inner border border-white/5">
-                        <div class="absolute bottom-2 right-2 bg-ungevil-atlas-accent text-white text-[8px] font-bold px-2 py-1 rounded">ATLAS</div>
-                    </div>
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-gray-900 dark:text-white">Atlas Grid</h4>
-                        <button onclick="copyToClipboard('background-image: linear-gradient(to right, rgba(13, 148, 136, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(13, 148, 136, 0.05) 1px, transparent 1px); background-size: 40px 40px;', this)" class="text-xs bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-3 py-1 rounded-full transition">Copy CSS</button>
-                    </div>
-                    <p class="text-xs text-gray-500">Teknisk rutenett for system og dokumentasjon.</p>
-                </div>
-
-                <!-- Unge Vil Gradient -->
-                <div class="bg-gray-50 dark:bg-gray-900 rounded-[2rem] p-6 border border-gray-200 dark:border-gray-800 flex flex-col">
-                    <div class="bg-gradient-to-br from-ungevil to-ungevil-dark w-full h-48 rounded-xl mb-6 relative overflow-hidden shadow-inner">
-                        <div class="absolute bottom-2 right-2 bg-white text-ungevil text-[8px] font-bold px-2 py-1 rounded">MAIN</div>
-                    </div>
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-gray-900 dark:text-white">Purple Fade</h4>
-                        <button onclick="copyToClipboard('background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%);', this)" class="text-xs bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-3 py-1 rounded-full transition">Copy CSS</button>
-                    </div>
-                    <p class="text-xs text-gray-500">Standard bakgrunn for knapper og hero-seksjoner.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Developer Section (NEW) -->
-        <section id="dev" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">05. Developer Guide</h2>
-            
-            <div class="bg-gray-900 rounded-[2rem] p-8 md:p-12 text-white font-mono text-sm shadow-xl overflow-hidden border border-gray-800">
-                <div class="mb-8">
-                    <span class="text-ungevil-light uppercase tracking-widest text-[10px] block mb-4">// HTML: Wordmark Construction</span>
-                    <div class="p-4 bg-black/50 rounded-xl border border-white/10 overflow-x-auto relative group">
-                        <button onclick="copyToClipboard('<h3 class=\'font-black tracking-tighter\'>UNGE<span class=\'text-[#9333EA]\'>VIL</span></h3>', this)" class="absolute top-4 right-4 text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded transition opacity-0 group-hover:opacity-100">Copy</button>
-                        <code class="text-gray-300">
-                            &lt;h3 class="font-black tracking-tighter"&gt;<br>
-                            &nbsp;&nbsp;UNGE&lt;span class="text-[#9333EA]"&gt;VIL&lt;/span&gt;<br>
-                            &lt;/h3&gt;
-                        </code>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <span class="text-ungevil-gold uppercase tracking-widest text-[10px] block mb-4">// Tailwind Config: Colors</span>
-                        <div class="p-4 bg-black/50 rounded-xl border border-white/10 overflow-x-auto h-40">
-<pre class="text-gray-300 text-xs">
-colors: {
-  ungevil: {
-    DEFAULT: '#9333EA',
-    dark: '#7E22CE',
-    bg: '#FBF7FF'
-  },
-  spark: {
-    gold: '#FBBF24',
-    black: '#000000'
-  },
-  atlas: {
-    dark: '#0F172A',
-    teal: '#0D9488'
-  }
-}
-</pre>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="text-ungevil-atlas-accent uppercase tracking-widest text-[10px] block mb-4">// CSS: Fonts</span>
-                        <div class="p-4 bg-black/50 rounded-xl border border-white/10 overflow-x-auto h-40">
-<pre class="text-gray-300 text-xs">
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,900&display=swap');
-
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-.font-spark {
-  font-weight: 900;
-  font-style: italic;
-}
-</pre>
-                        </div>
-                    </div>
-                </div>
+        <!-- Ikonografi -->
+        <section id="ikoner" class="mb-40 scroll-mt-24">
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">04. Ikonografi</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Icons -->
+                <div class="space-y-4"><p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Community</p><div class="flex gap-3"><div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil"><i data-lucide="users"></i></div><div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil"><i data-lucide="heart"></i></div></div></div>
+                <div class="space-y-4"><p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">SPARK</p><div class="flex gap-3"><div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-gold"><i data-lucide="zap"></i></div><div class="w-12 h-12 bg-gray-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-ungevil-gold"><i data-lucide="lightbulb"></i></div></div></div>
             </div>
         </section>
 
         <!-- ATLAS Section -->
         <section id="atlas" class="mb-40 scroll-mt-24">
-            <!-- (Content same as previous version) -->
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">06. ATLAS Modellen</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">05. ATLAS Modellen</h2>
             <div class="bg-ungevil-atlas-dark rounded-[2rem] p-10 md:p-16 overflow-hidden relative mb-12 border border-white/5 atlas-grid shadow-2xl">
-                <!-- ... content preserved ... -->
-                <div class="relative z-10">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-20">
-                        <div>
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="bg-ungevil-atlas-accent/10 text-ungevil-atlas-accent p-2 rounded-lg border border-ungevil-atlas-accent/20"><i data-lucide="book" class="w-6 h-6"></i></div>
-                                <span class="text-ungevil-atlas-accent font-bold uppercase text-xs tracking-widest">System</span>
-                            </div>
-                            <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6 leading-tight">Hosted on<br>GitBook.</h3>
-                            <p class="text-slate-300 text-lg leading-relaxed">ATLAS-modellen lever sitt eget liv som levende dokumentasjon på GitBook. Designet speiler dette: strukturert, lesbart og teknisk.</p>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="bg-ungevil-atlas-accent/10 text-ungevil-atlas-accent p-2 rounded-lg border border-ungevil-atlas-accent/20"><i data-lucide="book" class="w-6 h-6"></i></div>
+                            <span class="text-ungevil-atlas-accent font-bold uppercase text-xs tracking-widest">Documentation</span>
                         </div>
-                        <div class="space-y-4">
-                            <div class="bg-white text-slate-900 rounded-lg shadow-lg overflow-hidden border-l-4 border-ungevil-atlas-accent flex flex-col">
-                                <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50"><span class="font-bold text-sm text-slate-700">1. Introduksjon</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></div>
-                                <div class="p-6 bg-white"><div class="h-2 w-3/4 bg-slate-200 rounded mb-2"></div><div class="h-2 w-1/2 bg-slate-200 rounded"></div></div>
-                            </div>
+                        <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6 leading-tight">Hosted on<br>GitBook.</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-10 max-w-md">ATLAS-modellen lever sitt eget liv som levende dokumentasjon på GitBook. Designet speiler dette: strukturert, lesbart og teknisk.</p>
+                        <div class="flex gap-4">
+                            <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono border border-slate-700">v.2.0</span>
+                            <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono border border-slate-700">DOCS</span>
                         </div>
                     </div>
-                    <!-- ATLAS Modules -->
-                    <h4 class="text-white font-bold text-xl mb-8 border-b border-white/10 pb-4">Kjernemoduler</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl hover:bg-slate-800 transition group">
-                            <div class="w-10 h-10 bg-ungevil-atlas-accent/20 text-ungevil-atlas-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition"><i data-lucide="book-open" class="w-5 h-5"></i></div>
-                            <h5 class="text-white font-bold text-sm mb-2">Blanke Ark</h5><p class="text-slate-400 text-xs">Behovskartlegging uten føringer.</p>
+                    <!-- Visuals -->
+                    <div class="space-y-4">
+                        <div class="bg-white text-slate-900 rounded-lg shadow-lg overflow-hidden border-l-4 border-ungevil-atlas-accent flex flex-col">
+                            <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50"><span class="font-bold text-sm text-slate-700">1. Introduksjon</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></div>
+                            <div class="p-6 bg-white"><div class="h-2 w-3/4 bg-slate-200 rounded mb-2"></div><div class="h-2 w-1/2 bg-slate-200 rounded"></div></div>
                         </div>
-                        <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl hover:bg-slate-800 transition group">
-                            <div class="w-10 h-10 bg-ungevil-atlas-accent/20 text-ungevil-atlas-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition"><i data-lucide="hand-metal" class="w-5 h-5"></i></div>
-                            <h5 class="text-white font-bold text-sm mb-2">Gi det videre</h5><p class="text-slate-400 text-xs">Generasjon-til-generasjon læring.</p>
-                        </div>
-                        <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl hover:bg-slate-800 transition group">
-                            <div class="w-10 h-10 bg-ungevil-atlas-accent/20 text-ungevil-atlas-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition"><i data-lucide="lightbulb" class="w-5 h-5"></i></div>
-                            <h5 class="text-white font-bold text-sm mb-2">IdéLab</h5><p class="text-slate-400 text-xs">Verksted for idéutvikling.</p>
-                        </div>
-                        <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl hover:bg-slate-800 transition group">
-                            <div class="w-10 h-10 bg-ungevil-atlas-accent/20 text-ungevil-atlas-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition"><i data-lucide="puzzle" class="w-5 h-5"></i></div>
-                            <h5 class="text-white font-bold text-sm mb-2">Forståelse</h5><p class="text-slate-400 text-xs">Kontekst og rammeverk.</p>
-                        </div>
+                        <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4 flex items-center justify-between text-slate-300"><span class="text-sm font-medium">2. Kartlegging</span><i data-lucide="lock" class="w-4 h-4 opacity-50"></i></div>
                     </div>
                 </div>
             </div>
@@ -427,23 +316,26 @@ body {
 
         <!-- Create A Spark Section -->
         <section id="spark" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">07. Create A Spark</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">06. Create A Spark</h2>
+            
             <div class="bg-[#050505] rounded-[3rem] overflow-hidden relative spark-dot-pattern shadow-2xl border-4 border-ungevil-gold/20">
                 <div class="bg-hazard-tape h-4 w-full"></div>
                 <div class="p-10 md:p-20 relative z-10">
-                    <div class="flex flex-col xl:flex-row justify-between items-start mb-24 gap-12">
-                        <div class="flex-1">
-                            <div class="inline-block bg-ungevil-gold text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">Sub-Brand Identity</div>
-                            <h3 class="text-8xl md:text-9xl font-black italic text-white tracking-tighter leading-none mb-4">CREATE A<br><span class="text-transparent bg-clip-text bg-spark-gradient">SPARK</span></h3>
-                            <p class="text-gray-500 text-xl font-mono uppercase tracking-widest max-w-lg mt-8">Energy / Innovation / Speed</p>
-                        </div>
-                        <div class="xl:w-96 bg-gray-900 border border-white/10 p-8 rounded-3xl transform rotate-2 hover:rotate-0 transition duration-500 shadow-2xl">
+                    
+                    <div class="mb-20">
+                        <div class="inline-block bg-ungevil-gold text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">Sub-Brand Identity</div>
+                        <h3 class="text-8xl md:text-9xl font-black italic text-white tracking-tighter leading-none mb-4">CREATE A<br><span class="text-transparent bg-clip-text bg-spark-gradient">SPARK</span></h3>
+                        <p class="text-gray-500 text-xl font-mono uppercase tracking-widest max-w-lg mb-8">Energy / Innovation / Speed</p>
+                        
+                        <!-- Kollektivet moved here -->
+                        <div class="xl:w-96 bg-gray-900 border border-white/10 p-8 rounded-3xl transform rotate-1 hover:rotate-0 transition duration-500 shadow-2xl">
                             <span class="text-[10px] font-black uppercase text-ungevil-gold tracking-widest block mb-4">Local Alias</span>
                             <h4 class="text-white text-3xl font-black italic leading-none mb-2 break-words">KOLLEKTIVET<br>HAUGALANDET</h4>
                             <div class="h-1 w-20 bg-ungevil-gold rounded-full my-4"></div>
                             <p class="text-gray-500 text-xs leading-relaxed">Lokalt bruker vi navnet <strong>Kollektivet [Sted]</strong> om de fysiske møteplassene. Identiteten er den samme.</p>
                         </div>
                     </div>
+
                     <!-- Deck -->
                     <div class="mb-24">
                         <div class="flex items-center gap-4 mb-8"><div class="p-3 bg-ungevil-gold rounded-full text-black"><i data-lucide="lightbulb" class="w-6 h-6 fill-current"></i></div><h4 class="text-3xl font-black text-white italic">IdéLab Deck</h4></div>
@@ -456,6 +348,12 @@ body {
                             <div class="max-w-sm text-center md:text-left"><h5 class="text-white font-bold text-xl mb-2">Firkantet Kortstokk</h5><p class="text-gray-400 text-sm leading-relaxed">Vi bruker en unik, kvadratisk kortstokk i workshops for å fremprovosere idéer. Ikonet er en lysende pære.</p></div>
                         </div>
                     </div>
+                    <!-- Spark Graphics -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-gray-900 border border-white/10 p-8 rounded-3xl h-64 flex flex-col justify-between"><span class="text-[10px] font-black uppercase text-gray-500 tracking-widest">Type</span><div><span class="text-white text-5xl font-black italic leading-none block mb-2">Black<br>Italic</span><span class="text-ungevil-gold font-mono text-xs">Inter Family</span></div></div>
+                        <div class="bg-spark-gradient p-8 rounded-3xl h-64 flex flex-col justify-between shadow-lg relative group cursor-pointer" onclick="copyToClipboard('#FBBF24', this)"><span class="text-[10px] font-black uppercase tracking-widest opacity-60 text-black">Ignite Gradient</span><span class="font-black text-2xl italic leading-none text-black">#FBBF24<br>to #F59E0B</span><div class="absolute bottom-4 right-4 bg-black/20 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"><i data-lucide="copy" class="w-4 h-4 text-white"></i></div></div>
+                        <div class="bg-gray-900 border border-white/10 p-8 rounded-3xl h-64 flex flex-col justify-between overflow-hidden relative"><span class="text-[10px] font-black uppercase text-gray-500 tracking-widest relative z-10">Graphics</span><div class="absolute inset-0 flex items-center justify-center opacity-50"><div class="w-full h-8 bg-ungevil-gold transform -rotate-12 absolute"></div><div class="w-full h-2 bg-white transform rotate-45 absolute top-10"></div></div><div class="relative z-10 text-xs text-gray-400 font-mono mt-4">Tape, Stickers, Noise</div></div>
+                    </div>
                 </div>
                 <div class="bg-hazard-tape h-4 w-full"></div>
             </div>
@@ -463,7 +361,7 @@ body {
 
         <!-- Cohesion Section -->
         <section id="cohesion" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">08. Powered by...</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">07. Powered by...</h2>
             
             <div class="bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-[3rem] p-10 md:p-16">
                 <div class="text-center mb-16 max-w-2xl mx-auto"><h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Den røde tråden</h3><p class="text-gray-500 dark:text-gray-400">Unge Vil-logoen skal alltid være tilstede som avsender, men den trenger ikke alltid stå i sentrum. Den kan være en "tag", en footer, eller en del av en signatur.</p></div>
@@ -479,7 +377,7 @@ body {
                             <h4 class="text-white text-6xl md:text-7xl font-black italic leading-none mb-8 tracking-tighter">CREATE YOUR<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-ungevil-gold to-white">FUTURE</span></h4>
                             <div class="flex gap-4 justify-center"><button class="bg-ungevil-gold text-black px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white transition hover:scale-105">Bli med</button><button class="border border-white/30 text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition">Les mer</button></div>
                         </div>
-                        <div class="absolute bottom-8 right-8 bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl flex items-center gap-3 border border-white/10"><span class="text-[10px] text-gray-400 uppercase font-medium tracking-wider">Powered by</span><div class="flex items-center gap-1"><span class="text-white font-black tracking-tighter text-sm">UNGE<span class="opacity-70">VIL</span></span></div></div>
+                        <div class="absolute bottom-8 right-8" id="hero-pill-demo"></div>
                     </div>
                 </div>
 
@@ -518,7 +416,7 @@ body {
 
         <!-- Canva & Graphics Section -->
         <section id="canva" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">09. Canva & Graphics</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">08. Canva & Graphics</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-[2rem] p-8">
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Søkeord i Canva</h3>
@@ -540,7 +438,7 @@ body {
 
         <!-- Social Media (Gallery) -->
         <section id="some" class="mb-40 scroll-mt-24">
-            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">10. Social Presence</h2>
+            <h2 class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.4em] mb-12">09. Social Presence</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- 1. Event Promo Story -->
                 <div class="aspect-[9/16] bg-ungevil-navy rounded-[1.5rem] relative overflow-hidden flex flex-col shadow-xl group border border-gray-800">
@@ -569,10 +467,138 @@ body {
             </div>
         </section>
 
+        <!-- DOWNLOAD ASSETS -->
+        <section id="assets" class="mb-40 scroll-mt-24">
+            <div class="flex items-center gap-4 mb-12 border-b border-gray-200 dark:border-gray-800 pb-6">
+                <div class="bg-ungevil text-white p-3 rounded-xl"><i data-lucide="download-cloud" class="w-6 h-6"></i></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Download Assets</h2>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Generated SVGs and original PNGs.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 1. Logo (PNG Downloads) -->
+                <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col gap-6">
+                    <h4 class="font-bold text-gray-900 dark:text-white">Original Logo Files (PNG)</h4>
+                    <div class="flex gap-4">
+                        <a href="UngeVil-dark-line.png" download class="flex-1 bg-white border border-gray-200 px-4 py-3 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-50 transition text-gray-900 shadow-sm"><i data-lucide="download" class="w-4 h-4"></i> Dark Logo</a>
+                        <a href="UngeVil-light-line.png" download class="flex-1 bg-gray-800 text-white px-4 py-3 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-700 transition shadow-sm"><i data-lucide="download" class="w-4 h-4"></i> Light Logo</a>
+                    </div>
+                </div>
+
+                <!-- 2. Wordmark SVG -->
+                <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col gap-6">
+                    <h4 class="font-bold text-gray-900 dark:text-white">Wordmark Only (SVG)</h4>
+                    <div class="bg-white border border-gray-100 p-8 rounded-xl flex items-center justify-center">
+                        <div id="svg-wordmark-container"></div>
+                    </div>
+                    <button onclick="downloadSVG('svg-wordmark', 'UngeVil_Wordmark.svg')" class="bg-ungevil text-white px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-ungevil-dark transition"><i data-lucide="download" class="w-4 h-4"></i> Download SVG</button>
+                </div>
+
+                <!-- 3. Spark Patterns -->
+                <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col gap-6">
+                    <h4 class="font-bold text-gray-900 dark:text-white">Spark Patterns (SVG)</h4>
+                    <div class="bg-[#050505] p-8 rounded-xl flex items-center justify-center overflow-hidden h-32">
+                        <div id="svg-spark-preview" class="w-full h-full"></div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="downloadSparkPattern('landscape')" class="flex-1 bg-ungevil-gold text-black px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-white transition">Landscape</button>
+                        <button onclick="downloadSparkPattern('portrait')" class="flex-1 bg-ungevil-gold text-black px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-white transition">Portrait</button>
+                        <button onclick="downloadSparkPattern('square')" class="flex-1 bg-ungevil-gold text-black px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-white transition">Square</button>
+                    </div>
+                </div>
+
+                <!-- 4. Powered By Pill -->
+                <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col gap-6">
+                    <h4 class="font-bold text-gray-900 dark:text-white">Powered By Tag (SVG)</h4>
+                    <div class="bg-black p-8 rounded-xl flex items-center justify-center">
+                        <div id="svg-pill-container"></div>
+                    </div>
+                    <button onclick="downloadSVG('svg-pill', 'PoweredBy_UngeVil.svg')" class="bg-gray-800 text-white px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-700 transition"><i data-lucide="download" class="w-4 h-4"></i> Download SVG</button>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <script>
         lucide.createIcons();
+
+        // -----------------------
+        // SVG GENERATION LOGIC
+        // -----------------------
+
+        // 1. Wordmark (Text)
+        const wordmarkSVG = `
+        <svg id="svg-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+            <style>
+                .text { font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -0.05em; }
+            </style>
+            <text x="0" y="38" class="text" font-size="40" fill="black">UNGE<tspan fill="#9333EA">VIL</tspan></text>
+        </svg>`;
+        document.getElementById('svg-wordmark-container').innerHTML = wordmarkSVG;
+
+        // 2. Spark Pattern Preview
+        const sparkSVGContent = `
+            <defs>
+                <pattern id="sparkDots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.5" fill="#FBBF24" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#sparkDots)" />
+        `;
+        const sparkPreviewSVG = `<svg id="svg-spark-preview-el" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">${sparkSVGContent}</svg>`;
+        document.getElementById('svg-spark-preview').innerHTML = sparkPreviewSVG;
+
+        // 3. Powered By Pill
+        const pillSVG = `
+        <svg id="svg-pill" xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40">
+            <rect x="1" y="1" width="158" height="38" rx="19" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text x="15" y="24" font-family="sans-serif" font-size="8" fill="#9ca3af" font-weight="bold" text-transform="uppercase">POWERED BY</text>
+            <!-- Mini Wordmark (White) -->
+            <text x="80" y="24" font-family="sans-serif" font-weight="900" font-size="12" letter-spacing="-0.5" fill="white">UNGE<tspan opacity="0.7">VIL</tspan></text>
+        </svg>`;
+        document.getElementById('svg-pill-container').innerHTML = pillSVG;
+        document.getElementById('hero-pill-demo').innerHTML = pillSVG;
+
+        // -----------------------
+        // DOWNLOAD FUNCTIONS
+        // -----------------------
+        function downloadSVG(svgId, filename) {
+            const svgElement = document.getElementById(svgId);
+            triggerDownload(svgElement.outerHTML, filename);
+        }
+
+        function downloadSparkPattern(format) {
+            let width, height;
+            if (format === 'landscape') { width = 1920; height = 1080; }
+            else if (format === 'portrait') { width = 1080; height = 1920; }
+            else { width = 1080; height = 1080; } // Square
+
+            const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">${sparkSVGContent}</svg>`;
+            triggerDownload(svgString, `Spark_Pattern_${format}.svg`);
+        }
+
+        function triggerDownload(svgString, filename) {
+            // Add namespaces if missing
+            if (!svgString.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)) {
+                svgString = svgString.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+            }
+            // Add XML declaration
+            svgString = '<?xml version="1.0" standalone="no"?>\r\n' + svgString;
+
+            const url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgString);
+            const downloadLink = document.createElement("a");
+            downloadLink.href = url;
+            downloadLink.download = filename;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
 
         // Dark Mode Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
@@ -593,7 +619,7 @@ body {
             }
         });
 
-        // Copy to Clipboard
+        // Copy Clipboard
         function copyToClipboard(text, element) {
             navigator.clipboard.writeText(text).then(function() {
                 const tooltip = document.createElement('div');
