@@ -1,349 +1,310 @@
-# Brand System Specification: Unge Vil
+SYSTEM CONTEXT: UNGE VIL BRAND IDENTITY
 
-**Version:** 1.7 ALPHA **Status:** Work in Progress **Last Updated:** Feb 2026
+Version: 2.0 BETA
+Role: Master Source of Truth for Design & Development
+Usage: Provide this file to AI agents to ensure strict adherence to the brand guidelines.
 
-## 1. Core Identity
+1. ORGANIZATIONAL DNA
 
--   **Name:** Unge Vil
-    
--   **Tone of Voice:** Ungdommelig, men profesjonell. Inkluderende, energisk og strukturert.
-    
--   **Role:** Barne- og ungdomsorganisasjon. Fasilitator for unges ideer.
-    
--   **Mission:** Skape åpne, gratis møteplasser og bygge lokal bærekraft gjennom ung medvirkning.
-    
+Mission & Vision
 
-## 2. Color Palette & Harmony
+Core Purpose: Forebygge utenforskap og styrke sosial/mental helse gjennom inkludering, mestring og lokal bærekraft.
 
-Our palette uses a split-complementary harmony. **Purple** (Creativity) and **Gold** (Energy) provide high contrast, while **Teal** (Structure/Nature) grounds the system.
+Operating Model: "Ungdomsdrevet innhold – voksenforankret styring."
 
-### A. Unge Vil (Main Brand)
+Key Values: Samarbeid, Ressursdeling, Inkludering, Medvirkning, Mestring.
 
-_Playful, Inclusive, Creative._
+Tone of Voice (Copywriting Guide)
+
+Generelt (Unge Vil): Inkluderende, varm, tydelig, men aldri "ovenfra-og-ned". Vi bruker et språk som treffer ungdom, men som oppleves trygt for voksne/kommuner.
+
+ATLAS (System): Profesjonell, metodisk, presis. Bruk begreper som "økosystem", "ressursdeling", "verktøy". Unngå "buzzwords" uten substans.
+
+Create A Spark (Energy): Korte setninger. Imperativ form ("Gjør det", "Start nå"). Energisk, uredd, "hype". Bruk gjerne CAPS for effekt.
+
+2. BRAND ARCHITECTURE & HIERARCHY
+
+We operate with a "House of Brands" structure tied together by a common visual DNA.
+
+A. Unge Vil (The Mother Brand)
+
+Role: The organization, the safe harbor, the sender.
+
+Visual Key: Soft, round, welcoming. Purple & Coral.
+
+B. ATLAS-modellen (The Methodology)
+
+Role: The tool for municipalities and partners. Structure, documentation, system.
+
+Visual Key: Technical, grid-based, modular. Slate & Teal.
+
+C. Create A Spark (The Youth Brand)
+
+Role: Innovation lab, workshops, creative explosion. Also known locally as "Kollektivet".
+
+Visual Key: High contrast, chaotic energy, stickers. Black & Gold.
+
+3. DESIGN TOKENS (VISUAL LANGUAGE)
+
+Color Palette (Tailwind CSS Map)
+
+Scope
 
 Token Name
 
 HEX
 
-Tailwind Class
+Tailwind
 
 Usage
 
-**Primary Purple**
+Main
 
-`#9333EA`
+brand-purple
 
-`purple-600`
+#9333EA
 
-Hovedfarge, knapper, highlights.
+purple-600
 
-**Creative Coral**
+Primary action, brand background.
 
-`#FB7185`
+Main
 
-`rose-400`
+brand-dark
 
-Sekundærfarge for myke/kreative elementer.
+#7E22CE
 
-**Background Tint**
+purple-700
 
-`#FBF7FF`
+Hover states.
+
+Main
+
+brand-coral
+
+#FB7185
+
+rose-400
+
+Creative accents, warmth.
+
+Main
+
+bg-tint
+
+#FBF7FF
 
 N/A
 
-Lys lilla bakgrunn (Section backgrounds).
+Light section backgrounds.
 
-### B. ATLAS (System Brand)
+Atlas
 
-_Professional, Structured, Public Sector Friendly._
+atlas-dark
 
-Token Name
+#0F172A
 
-HEX
+slate-900
 
-Tailwind Class
+Professional backgrounds/text.
+
+Atlas
+
+atlas-base
+
+#334155
+
+slate-700
+
+Borders, secondary text.
+
+Atlas
+
+atlas-teal
+
+#0D9488
+
+teal-600
+
+Success, growth, balance accents.
+
+Spark
+
+spark-gold
+
+#FBBF24
+
+amber-400
+
+Energy, highlights, stickers.
+
+Spark
+
+spark-black
+
+#000000
+
+black
+
+Backgrounds for maximum contrast.
+
+Gradient Token:
+
+spark-gradient: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)
+
+Typography System
+
+Font Family: Inter (Google Fonts).
+Fallback: Arial, sans-serif.
 
 Usage
 
-**Atlas Dark**
+Weight
 
-`#0F172A`
+Style
 
-`slate-900`
+Tracking
 
-Primærfarge (Slate/Navy). Profesjonell base.
+Case
 
-**Atlas Base**
+Logo/Hero
 
-`#334155`
+900 (Black)
 
-`slate-700`
+Normal
 
-Sekundær/Border farge.
+-0.05em
 
-**Atlas Teal**
+Mixed or Uppercase
 
-`#0D9488`
+Headlines
 
-`teal-600`
+900 (Black)
 
-Aksentfarge (Vekst/Struktur/Balanse).
+Normal
 
-**Atlas Light**
+-0.02em
 
-`#F1F5F9`
+Sentence
 
-`slate-100`
+Spark Hero
 
-Bakgrunnsfarge for dokumentasjon.
+900 (Black)
 
-### C. Create A Spark (Energy Brand)
+Italic
 
-_High Voltage, Innovation, Speed._
+-0.02em
 
-Token Name
+UPPERCASE
 
-HEX
+Subheads
 
-Tailwind Class
+700 (Bold)
 
-Usage
+Normal
 
-**Spark Gold**
+0
 
-`#FBBF24`
+Sentence
 
-`amber-400`
+UI Labels
 
-Primærfarge (Energi/Lys).
+600 (SemiBold)
 
-**Gold Dark**
+Normal
 
-`#F59E0B`
+0.05em
 
-`amber-500`
+UPPERCASE
 
-Gradient end-stop / Hover states.
+Body
 
-**Void Black**
+400 (Regular)
 
-`#000000`
+Normal
 
-`black`
+0
 
-Bakgrunn for maksimal kontrast.
+Sentence
 
-**Spark Gradient**
+Iconography (Lucide Icons)
 
-`#FBBF24` -> `#F59E0B`
+Stroke: 2px constant width.
 
-Linear gradient (135deg).
+Cap/Join: Round.
 
-## 3. Typography
+Style: Minimalist outline. Never filled (unless active state).
 
-**Primary Font Family:** `Inter` (Google Fonts) **Fallback Font:** `Arial`, sans-serif (For Google Docs/System default)
+4. UI & WEB IMPLEMENTATION GUIDE
 
-### Type Scale & Weights
+Border Radius (Corner Rounding)
 
--   **Headlines (Display):** Inter Black (`font-weight: 900`). Tracking: Tighter (`-0.05em`).
-    
--   **Subheadlines:** Inter Bold (`font-weight: 700`).
-    
--   **Body Text:** Inter Regular (`font-weight: 400`). Line-height: `1.5` or `1.6`.
-    
--   **Spark Headline:** Inter Black Italic (`font-weight: 900`, `font-style: italic`). Used for high-impact statements.
-    
+Unge Vil (Default): rounded-[2rem] (32px) for large containers. Very friendly.
 
-## 4. Logo & Assets
+Buttons: rounded-full (Pill). Always.
 
-### Files
+Atlas: rounded-xl (12px). More precise/technical.
 
--   `UngeVil-dark-line.png`: Mørk logo (tekst + ikon). Brukes på lyse bakgrunner.
-    
--   `UngeVil-light-line.png`: Lys logo (tekst + ikon). Brukes på mørke/fargede bakgrunner.
-    
--   `favicon.png`: Ikon alene. Brukes som profilbilde eller der plassen er kvadratisk.
-    
+Spark: rounded-lg (8px) or mixed with rounded-none.
 
-### Usage Rules
+Shadows & Depth
 
--   **Contrast:** Sørg alltid for WCAG AA kontrast.
-    
--   **Brand Background:** På lilla bakgrunn (`#9333EA`), bruk `UngeVil-light-line.png` med CSS-filter `brightness(0) invert(1)` for å tvinge logoen til å bli 100% hvit (dersom lilla elementer krasjer med bakgrunnen).
-    
+Light Mode: Soft, colored shadows. box-shadow: 0 10px 40px -10px rgba(147, 51, 234, 0.15);
 
-## 5. Iconography
+Atlas Mode: Glassmorphism. bg-white/5 backdrop-blur-md border border-white/10.
 
-**Library:** [Lucide Icons](https://lucide.dev/ "null")
+Spark Mode: Hard drop shadows or glows. box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
 
-**Style Guidelines:**
+Logo Construction on Web
 
--   **Stroke Width:** 2px (Consistent)
-    
--   **Corners:** Rounded (Line caps/joins: round)
-    
--   **Color:** Matcher konteksten (Lilla for Unge Vil, Teal for Atlas, Gull for Spark).
-    
+Always use the text-based wordmark in HTML when possible for accessibility/SEO, or the SVG asset.
 
-**Key Icons:**
+<!-- Main Logo Concept -->
+<div class="font-black tracking-tighter text-4xl">
+  <span class="text-gray-900 dark:text-white">UNGE</span><span class="text-[#9333EA]">VIL</span>
+</div>
 
--   `users`, `heart`, `smile` (Community)
-    
--   `zap`, `lightbulb`, `monitor` (Gaming/Spark/IdéLab)
-    
--   `layout-template`, `clipboard-check`, `building-2`, `book` (ATLAS/Structure)
-    
 
-## 6. Sub-Brands & Implementation
+5. SUB-BRAND SPECIFICS
 
-### A. ATLAS-modellen (System & Struktur)
+ATLAS-modellen
 
-**Konsept:** Navigasjon, kartlegging, økosystem. ATLAS er dokumentasjonen og "operativsystemet". **Context:** Hosted on GitBook.
+Keywords: System, Structure, Blueprint, Navigation.
 
-**Core Modules:**
+Modules (Content):
 
-1.  **Blanke Ark:** Behovskartlegging uten føringer. (Icon: `book-open`)
-    
-2.  **Gi det videre:** Ung-til-ung læring og bærekraft. (Icon: `hand-metal` / `repeat`)
-    
-3.  **IdéLab:** Verkstedmetodikk for idéutvikling. (Icon: `lightbulb`)
-    
-4.  **Forståelse:** Rammeverk og kontekst. (Icon: `puzzle` / `brain`)
-    
+Blanke Ark (Need analysis)
 
-**Visual Style:**
+Gi det videre (Peer-learning)
 
--   **Aesthetic:** Clean, documentation-focused, blueprint feeling.
-    
--   **Patterns:** Grids, dashed lines, timelines.
-    
--   **Motion:** Presis, flytende, logisk (`ease-out`).
-    
+IdéLab (Workshop)
 
-### B. Create A Spark (Energi & Innovasjon)
+Forståelse (Context)
 
-**Konsept:** Gnisten. Startfasen. Rask, uredd og energisk.
+Visual Assets: Use generic "Blueprint Grids" as backgrounds. Use dashed lines to show connections.
 
-**Naming Convention:**
+Create A Spark
 
--   **Global Concept:** "Create A Spark"
-    
--   **Local Venue:** "Kollektivet [Stedsnavn]" (e.g., _Kollektivet Haugalandet_).
-    
+Keywords: Energy, Speed, Raw, Workshop.
 
-**Elements:**
+Alias: "Kollektivet [Stedsnavn]" (e.g. Kollektivet Haugalandet).
 
--   **IdéLab Deck:** Firkantet kortstokk brukt i workshops. Symbol: Lysende pære.
-    
--   **Visual Style:** High contrast (Black/Gold), Stickers, "Hazard tape" patterns, Noise textures.
-    
--   **Motion:** Rask, snappy, elektrisk (`ease-out-expo` / `spring`).
-    
+Key Asset: IdéLab Deck. A physical deck of square cards used in workshops. Icon: Glowing lightbulb.
 
-## 7. Brand Cohesion: "Powered by..."
+Visual Assets: "Hazard Tape" patterns, Noise textures, Stickers (rotated -5 to 5 degrees).
 
-Selv om sub-brands har sterke egne identiteter, må de knyttes til moderskipet.
+6. PROMPTING GUIDE FOR AI GENERATION
 
-**Regler:**
+Use these prompts when asking an AI to generate assets for Unge Vil.
 
-1.  **Typography:** Alle brands bruker **Inter** som base.
-    
-2.  **Logo Presence:** Unge Vil-logoen skal alltid være tilstede som avsender.
-    
-    -   **Nettsider:** I footer eller som "tag" i hjørnet.
-        
-    -   **Print:** Nederst på plakater/rollups med teksten "Et tilbud fra" eller "Powered by".
-        
-3.  **Cross-linking:** Farger kan lånes på tvers som små aksenter (f.eks. en lilla knapp på en Atlas-side) for å vise slektskap.
-    
+For Unge Vil Images:
 
-## 8. Web Design Tokens
+"Minimalist 3D render or flat illustration, soft rounded shapes, purple and coral gradient lighting, friendly and inclusive atmosphere, white background, high key."
 
-For utviklere og designere.
+For Spark Images:
 
-### A. Border Radius
+"Gritty urban aesthetic, high contrast black and yellow, stickers, tape textures, motion blur, bold typography, energetic, spark particles, dark mode."
 
--   **Buttons:** `rounded-full` (Pill shape).
-    
--   **Cards (Large):** `rounded-[2rem]` (32px) - Soft and friendly.
-    
--   **Cards (Small):** `rounded-xl` (12px).
-    
--   **Spark Exception:** Kan bruke skarpere hjørner eller roterte elementer for effekt.
-    
+For Atlas Images:
 
-### B. Shadows
-
--   **Light Mode:** `box-shadow: 0 10px 40px -10px rgba(147, 51, 234, 0.15);` (Purple tint).
-    
--   **Dark Mode:** Subtle borders (`1px solid rgba(255,255,255,0.1)`) instead of drop shadows.
-    
-
-### C. Spacing
-
--   **Generous:** Bruk mye luft (`p-8`, `p-12`) for å unngå rot.
-    
-
-## 9. Canva & Graphics Guidelines
-
-Tips for ikke-designere som lager innhold.
-
-### Søkeord i Canva (Keywords)
-
--   **Unge Vil:** `Organic shapes`, `Soft gradient`, `Doodle line`, `Minimalist`.
-    
--   **Create A Spark:** `Grunge texture`, `Tape`, `Sticker`, `Distorted`, `Grainy gradient`.
-    
--   **ATLAS:** `Geometric grid`, `Technical line`, `Blueprint`, `Isometric`.
-    
-
-### Emoji-bruk
-
--   Bruk standard Apple/iOS emojis for et "folkelig" og rent uttrykk.
-    
--   Unngå 3D-renderte "clay"-emojis som krasjer med stilen.
-    
--   Bruk emojis som punktmerking eller reaksjoner, ikke som hovedbilde.
-    
-
-### Former
-
--   **Unge Vil:** Runde, myke former.
-    
--   **Spark:** Skarpe kanter, stjerner, lyn, "eksplosjoner".
-    
--   **ATLAS:** Rektangler, linjer, koblinger.
-    
-
-## 10. Social Media Presence
-
-**Story Templates:**
-
-1.  **Event Promo:** Bilde i bakgrunn (sorthvitt eller farget), stor typografi, "Link i bio"-sticker.
-    
-2.  **Q&A / Interaksjon:** Lilla bakgrunn, spørsmålsboks, emojier.
-    
-3.  **Takeover / Behind the scenes:** Råbilder/video med sort overlay og hvit tekst. "Tag" personen som har takeover.
-    
-4.  **Sitat:** Hvit bakgrunn, lilla sitattegn, stor sort tekst.
-    
-
-## 11. CSS Utility Classes (Reference)
-
-```
-/* Unge Vil */
-.bg-brand { background-color: #9333EA; }
-.text-brand { color: #9333EA; }
-.font-display { font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -0.05em; }
-
-/* Atlas */
-.atlas-theme { @apply bg-[#0F172A] text-white; }
-.atlas-accent { @apply text-[#0D9488]; }
-.atlas-card { @apply bg-white/5 backdrop-blur-md border border-white/10; }
-
-/* Spark */
-.spark-theme { @apply bg-black text-[#FBBF24]; }
-.spark-font { @apply font-black italic; }
-.spark-gradient { background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%); }
-
-```
+"Isometric grid, blueprint style, clean lines, teal and navy blue, data visualization, connected nodes, structured, professional, white or dark slate background."
